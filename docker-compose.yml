@@ -4,3 +4,11 @@ services:
     build: .
     ports:
       - "3000:3000"
+  lavalink:
+    build: ./Lavalink
+
+    ports:
+      - "5000:5000"
+    environment:
+      - JAVA_OPTS=-Xmx512M -Xms512M
+    restart: always
